@@ -86,7 +86,7 @@ try:
                 print(f"{role.capitalize()}: {response_text}")
 
                 # Transmit response
-                waveform = ggwave.encode(response_text, protocolId=1, volume=20)
+                waveform = ggwave.encode(response_text, protocolId=4, volume=20)
                 output_stream.write(waveform, len(waveform)//4)
                 time.sleep(2)  # Pause between exchanges
 

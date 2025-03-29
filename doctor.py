@@ -113,7 +113,7 @@ INPUT_FRAMES_PER_BUFFER = 1024
 OUTPUT_FRAMES_PER_BUFFER = 4096 # Larger buffer for potentially longer AI responses
 
 # GGWave Settings
-PROTOCOL_ID = 1  # Choose a ggwave protocol (e.g., 1: 'audible-fast')
+PROTOCOL_ID = 4  # Choose a ggwave protocol (e.g., 1: 'audible-fast')
 VOLUME = 20      # Transmission volume (0-100)
 TX_PAUSE_DURATION = 2.0 # Seconds to pause after transmitting
 
@@ -223,7 +223,7 @@ try:
 
                     # Transmit the doctor's response
                     if response_text:
-                        waveform = ggwave.encode(response_text, protocolId=PROTOCOL_ID, volume=VOLUME)
+                        waveform = ggwave.encode(response_text, protocolId=4, volume=VOLUME)
                         if waveform:
                             # Ensure waveform length is a multiple of frame size (bytes per sample * channels)
                             bytes_per_frame = p.get_sample_size(OUTPUT_FORMAT) * CHANNELS
