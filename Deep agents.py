@@ -64,7 +64,7 @@ def chat_with_gemini(prompt):
 # Send initial message if patient
 if role == "patient":
     initial_message = "Hello, I'd like to book a doctor's appointment."
-    waveform = ggwave.encode(initial_message, protocolId=1, volume=20)
+    waveform = ggwave.encode(initial_message, protocolId=4, volume=20)
     output_stream.write(waveform, len(waveform)//4)
     print(f"Patient: {initial_message}")
     time.sleep(2)  # Wait for transmission
